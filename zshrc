@@ -56,6 +56,7 @@ export EDITOR="vim"
 
 # Alias
 alias battery-statu='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
+alias irssi='screen irssi'
 
 # Term colors
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
