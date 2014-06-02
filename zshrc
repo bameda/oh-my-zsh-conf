@@ -51,6 +51,10 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bi
 # CDBookmarks
 source /usr/bin/cdb.sh
 
+# virtualenvwrapper
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper.sh
+
 # Editor
 export EDITOR="vim"
 
