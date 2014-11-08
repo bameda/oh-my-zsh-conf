@@ -46,7 +46,7 @@ ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=121'
 ZSH_HIGHLIGHT_STYLES[path]='fg=229'
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/home/bameda/.gem/ruby/2.1.0/bin:/home/bameda/.local/bin
 
 # CDBookmarks
 source /usr/bin/cdb.sh
