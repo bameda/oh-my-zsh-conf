@@ -102,6 +102,7 @@ source /usr/bin/virtualenvwrapper.sh
 alias battery-statu='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 alias irssi='screen irssi'
 alias vi="vim"
+alias py.test='py.test -s --tb=native'
 
 # TIP: Show part of man page for the option (Ex. manopt git-rebase )
 manopt(){
