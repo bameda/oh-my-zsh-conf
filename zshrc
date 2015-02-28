@@ -108,3 +108,7 @@ alias py.test='py.test -s --tb=native'
 manopt(){
     man $1 | sed 's/.\x08//g'| sed -n "/^\s\+-\+$2\b/,/^\s*$/p" | sed '$d;';
 }
+
+# NodeJs - NVM
+export NVM_DIR="/home/bameda/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
