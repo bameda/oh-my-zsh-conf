@@ -112,3 +112,6 @@ manopt(){
 # NodeJs - NVM
 export NVM_DIR="/home/bameda/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# Ruby - bundler
+export GEM_HOME=$(ruby -e 'print Gem.user_dir')
