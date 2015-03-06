@@ -60,7 +60,7 @@ ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=121'
 ZSH_HIGHLIGHT_STYLES[path]='fg=229'
 
 # Customize to your needs...
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/bameda/.gem/ruby/2.2.0/bin:/home/bameda/.local/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$(ruby -e "print Gem.user_dir")/bin:/home/bameda/.local/bin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
