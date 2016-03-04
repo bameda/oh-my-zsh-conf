@@ -46,7 +46,15 @@ export UPDATE_ZSH_DAYS=7
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(history history-substring-search autoenv colorize colored-man virtualenvwrapper fabric zsh-syntax-highlighting)
+
+# Note CUSTOM PLUGINS:
+#
+#      Download the repositories to '~/.oh-my-zsh/custom/plugins/'
+#
+#      git clone https://github.com/jocelynmallon/zshmarks.git ~/.oh-my-zsh/custom/plugins/zshmarks
+#      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+plugins=(history-substring-search colorize colored-man virtualenvwrapper fabric zsh-syntax-highlighting zshmarks)
 
 source $ZSH/oh-my-zsh.sh
 
