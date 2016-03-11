@@ -97,6 +97,13 @@ fi
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 
+# NodeJs - NVM
+export NVM_DIR="/home/bameda/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# Ruby - bundler
+export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+
 # Alias
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -117,9 +124,3 @@ manopt(){
     man $1 | sed 's/.\x08//g'| sed -n "/^\s\+-\+$2\b/,/^\s*$/p" | sed '$d;';
 }
 
-# NodeJs - NVM
-export NVM_DIR="/home/bameda/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-# Ruby - bundler
-export GEM_HOME=$(ruby -e 'print Gem.user_dir')
