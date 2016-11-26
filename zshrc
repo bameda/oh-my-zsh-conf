@@ -1,14 +1,20 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Path to your oh-my-zsh installation.
+export ZSH=/home/bameda/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="fishy"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -45,16 +51,7 @@ export UPDATE_ZSH_DAYS=7
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-
-
-# Note CUSTOM PLUGINS:
-#
-#      Download the repositories to '~/.oh-my-zsh/custom/plugins/'
-#
-#      git clone https://github.com/jocelynmallon/zshmarks.git ~/.oh-my-zsh/custom/plugins/zshmarks
-#      git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-
-plugins=(history-substring-search colorize colored-man virtualenvwrapper fabric zsh-syntax-highlighting zshmarks)
+plugins=(history-substring-search colorize colored-man virtualenvwrapper fabric zsh-syntax-highlighting zshmarks zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -67,24 +64,10 @@ ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=225'
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=121'
 ZSH_HIGHLIGHT_STYLES[path]='fg=229'
 
-# Customize to your needs...
+# User configuration
+
+# Customize the PATH
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$(ruby -e "print Gem.user_dir")/bin:/home/bameda/.local/bin
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Term colors
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
@@ -92,6 +75,25 @@ if [ -e /usr/share/terminfo/x/xterm-256color ]; then
 else
     export TERM='xterm-color'
 fi
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+export EDITOR='nvim'
+
+# Compilation flags
+export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
@@ -104,7 +106,9 @@ export NVM_DIR="/home/bameda/.nvm"
 # Ruby - bundler
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 
-# Alias
+# Android - SDK
+export ANDROID_HOME="/opt/android-sdk"
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -115,11 +119,11 @@ export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias battery-statu='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
-alias vi="vim"
+alias vi="nvim"
+alias vim="nvim"
 alias py.test='py.test -s --tb=native'
 
 # TIP: Show part of man page for the option (Ex. manopt git-rebase )
-manopt(){
+man-opt(){
     man $1 | sed 's/.\x08//g'| sed -n "/^\s\+-\+$2\b/,/^\s*$/p" | sed '$d;';
 }
-
