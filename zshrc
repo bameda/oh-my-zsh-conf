@@ -108,6 +108,9 @@ export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 # Android - SDK
 export ANDROID_HOME="/opt/android-sdk"
 
+# Fix missed icons in Qt5 apps like dolphin in non KDE/Gnome desktops
+[ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
