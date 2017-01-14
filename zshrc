@@ -99,8 +99,17 @@ export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 
 # NodeJs - NVM
-export NVM_DIR="/home/bameda/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# place this after nvm initialization!
+autoload -U add-zsh-hook
+load-nvmrc() {
+    if [[ -f .nvmrc && -r .nvmrc ]]; then
+        nvm use &>/dev/null
+    elif [[ $(nvm version) != $(nvm version default)  ]]; then
+        nvm use default &>/dev/null
+    fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
 
 # Ruby - bundler
 export GEM_HOME=$(ruby -e 'print Gem.user_dir')
