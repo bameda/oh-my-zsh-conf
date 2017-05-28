@@ -136,6 +136,7 @@ alias battery-statu='upower -i /org/freedesktop/UPower/devices/battery_BAT0| gre
 alias vi="nvim"
 alias vim="nvim"
 alias py.test='py.test -s --tb=native'
+alias chromium-x1='chromium --force-device-scale-factor=1'
 
 # TIP: Show part of man page for the option (Ex. manopt git-rebase )
 man-opt(){
