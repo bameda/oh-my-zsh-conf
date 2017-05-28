@@ -11,6 +11,7 @@ Packages needed
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - [zsh-nvm](https://github.com/lukechilds/zsh-nvm)
+- z-git
 - ruby
 - python-virtualenvwrapper
 
@@ -26,5 +27,5 @@ Setup
     mv ~/.zshrc ~/.zshrc.oh-my-zsh-conf.old
     ln -s ~/.oh-my-zsh-conf/zshrc ~/.zshrc
     ```
-    
+
 3. Run `zsh` and check the output

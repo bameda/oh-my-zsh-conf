@@ -117,6 +117,9 @@ export GEM_HOME=$(ruby -e 'print Gem.user_dir')
 # Android - SDK
 export ANDROID_HOME="/opt/android-sdk"
 
+# Z (https://github.com/rupa/z) Install with `yaourt -S aur/z-git`
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
 # Fix missed icons in Qt5 apps like dolphin in non KDE/Gnome desktops
 [ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"
 
