@@ -92,7 +92,7 @@ fi
 export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # virtualenvwrapper
 export WORKON_HOME=~/.virtualenvs
